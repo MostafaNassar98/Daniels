@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;900&family=Poppins:wght@100;300;400;500;600;700&display=swap');:root{
+    --first-font:'Montserrat', sans-serif;
+    --second-font:'Poppins', sans-serif;
+    --first-color:#748182;
+    --second-color:#1C1C1C;
+}
+
+.first-font{
+    font-family: var(--first-font);
+}
+.second-font{
+    font-family: var(--second-font);
+}
+.first-color{
+    color: var(--first-color);
+}
+
+.main-heading h3{
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+}
+/*==============start-navbar============= */
+.nav-link{
+    position: relative;
+    padding-left: 0 !important;
+    padding-right: 25px !important;
+
+}
+.nav-link::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    right: 0;
+    top: calc(90%);
+    transition: width 0.5s;
+
+}
+.nav-link.active::after{
+    width: 64%;
+}
+/*==============end-navbar============= */
+/*==============start-home============= */
+.home{
+    background-image: url(../img/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-caption{
+    font-size: 60px;
+}
+.home-caption::after{
+    content: '';
+    animation: typing 2s infinite alternate;
+}
+@keyframes typing{
+    0%{content:' |';}
+    20%{content:' Developer|';}
+    40%{content:' Deve|';}
+    60%{content:' Designer|';}
+    80%{content:' |';}
+    80%{content:' Larry Daneils|';}
+}
+.home .social li{
+    background-color: rgba(0, 0, 0, 0.298);
+    font-size: 1.25rem;
+    color: white;
+    padding: 5px 8px;
+    border: transparent 1px solid;
+    border-radius: 50px;
+}
+/*==============end-home============= */
+/*==============start-about============= */
+.progress-bar{
+    background-color: var(--second-color);
+}
+.about .progress{
+    height: 25px;
+}
+.about .button-2,.about .button-1{
+    text-decoration: none;
+    color: var(--second-color);
+    padding: 7px 25px;
+    margin-top: 40px;
+    margin-right: 2px;
+}
+.about .button-1{
+    background-color: var(--second-color);
+    color: white;
+}
+.about .button-1:hover{
+    background-color: rgb(222, 219, 219);;
+    color: #1C1C1C;
+}
+.about .button-2{
+    background-color: rgb(222, 219, 219);
+}
+.about .button-2:hover{
+    background-color: var(--second-color);
+    color: white;
+}
+/*==============end-about============= */
+/*==============start-services============= */
+.services .card span{
+    font-size: 1.5625rem;
+    padding: 15px 17px;
+    border-radius: 50%;
+    background-color: #e3e2e2;
+}
+.services .card:hover span{
+    background-color: #1C1C1C;
+    color: white;
+}
+/*==============end-services============= */
+/*==============start-portfolio============= */
+.portfolio .image{
+    overflow: hidden;
+    position: relative;
+}
+.portfolio .layer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    color:#1C1C1C;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: top 0.5s, background-color 0.5s ;
+}
+.portfolio .layer:hover {
+    opacity: 1;
+    background-color: rgb(247, 244, 244);
+    top: 0%;
+}
+.portfolio .layer ul li{
+    padding-left: 5px;
+}
+.portfolio .layer ul li:hover .layer{
+    padding-top: 0px;
+}
+.portfolio .layer ul li span{
+    padding: 4px 6px;
+    border-radius: 50%;
+    background-color: #1C1C1C;
+    color: rgb(222, 219, 219);
+}
+/*==============end-portfolio============= */
+/*==============start-work============= */
+.nav-link{
+    color: #1C1C1C !important;
+    padding-left: 5px !important;
+}
+.nav-grapic-tab{
+    color: #1C1C1C !important;
+}
+.portfolio-area .nav-tabs{
+    border: unset !important;
+
+}
+/*==============end-work============= */
+/*==============start-testimonials============= */
+.testimonials .carousel-indicators {
+    bottom: -65px;
+}
+.testimonials  .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #1C1C1C;
+}
+.testimonials  .carousel-item{
+    position: relative;
+    left: 99%;
+    transition: position 0.5s;
+}
+.testimonials  .carousel-item.active{
+    position: relative;
+    left: 0%;
+}
+.testimonials .testimonials-image{
+    width: 150px;
+    height: 150px;
+}
+/*==============end-testimonials============= */
+/*==============start-counter============= */
+.counter .item span{
+    font-size: 30px;
+    font-weight: 700;
+}
+.counter .item h3{
+    font-size: 35px;
+    font-weight: 900;
+}
+.counter .item p{
+    font-weight: 500;
+    color: #748182;
+}
+/*==============end-counter============= */
+/*==============start-blog============= */
+.blog .carousel-indicators {
+    bottom: -65px;
+}
+.blog .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #1C1C1C;
+}
+.blog  .carousel-item{
+    position: relative;
+    left: 99%;
+    transition: position 0.3s;
+}
+.blog  .carousel-item.active{
+    position: relative;
+    left: 0%;
+}
+.blog-image{
+    overflow: hidden;
+}
+.blog .card-img-top{
+    transition: transform 0.5s;
+}
+.blog .card-img-top:hover{
+    transform: scale(1.5) !important;
+}
+/*==============end-blog============= */
+/*==============start-contact============= */
+.contact span{
+    padding: 10px 12px;
+    color: black;
+    font-size: 25px;
+    border-radius: 50%;
+    background-color: #cccece;
+    transition: background-color 0.5s , color 0.5s;
+}
+.contact input{
+    border-radius: 5px;
+    color: #748182;
+    background-color: #F4F4F4;
+    border: unset;
+    padding: 7px 2px;
+}
+.contact textarea{
+    background-color: #F4F4F4;
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.contact button{
+    background-color: #1C1C1C;
+    color: white;
+    padding: 7px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.contact button:hover{
+    background-color: white;
+    color: black;
+}
+.contact-details:hover span{
+    background-color: #1C1C1C;
+    color: white;
+}
+/*==============end-contact============= */
+/*==============start-footer============= */
+.footer{
+    color: #748182;
+    padding: 30px 0;
+}
+/*==============end-footer============= */
